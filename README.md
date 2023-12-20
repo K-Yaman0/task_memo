@@ -1,24 +1,34 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column                  | Type   | Options                   |
+| ----------------------- | ------ | ------------------------- |
+| nickname                | string | null: false               |
+| email                   | string | null: false, unique: true |
+| encrypted_password      | string | null: false               |
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many :tasks
+- has_many :memos
 
-* System dependencies
+## tasks テーブル
 
-* Configuration
+| Column                  | Type   | Options                   |
+| ----------------------- | ------ | ------------------------- |
+| content                 | string | null: false               |
 
-* Database creation
+### Association
 
-* Database initialization
+- belongs_to :user
+- has_many :memos
 
-* How to run the test suite
+## memos テーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column                  | Type   | Options                   |
+| ----------------------- | ------ | ------------------------- |
+| detail                  | string | null: false               |
 
-* Deployment instructions
+### Association
 
-* ...
+- belongs_to :user
+- belongs_to :task
