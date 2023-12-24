@@ -17,6 +17,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   def show
     @task = Task.find(params[:id])
   end
