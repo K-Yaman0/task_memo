@@ -4,10 +4,13 @@
 </div>
 <ul>
   <% @tasks.each do |task| %>
-    <li>
-    <%= link_to task_path(task.id) do %>
-      <%= task.content %>
-    <% end %>  
-    </li>
+    <div class="task-contents">
+      <%= link_to task_path(task.id) do %>
+        <div class="task-content">
+          <%= task.content %>
+        </div>
+      <% end %>
+      <span><%= image_tag 'arrow_top.png',class: "pull-down" %></span>
+    </div>
   <% end %>
 </ul>
