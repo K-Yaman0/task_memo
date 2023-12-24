@@ -10,7 +10,10 @@
           <%= task.content %>
         </div>
       <% end %>
-      <span><%= image_tag 'arrow_top.png',class: "pull-down" %></span>
+      <span><%= image_tag 'arrow_top.png', class: "pull-down" %></span>
+      <ul class="hiden">
+        <li><%= link_to '編集する', edit_task_path, class: %></li>
+      </ul>
     </div>
   <% end %>
 </ul>
