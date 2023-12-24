@@ -1,0 +1,5 @@
+<h1>編集ページ</h1>
+<%= form_with model: @task, local: true do |f| %>
+  <%= f.text_field :content, placeholder:"タスクを入力" %>
+  <%= f.submit "投稿する", class:"sell-btn" %>
+<% end %>
