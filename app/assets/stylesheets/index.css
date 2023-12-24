@@ -1,0 +1,13 @@
+.post{
+  background-color: #00008B;
+  height: 40px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-btn{
+  color: #ffffff;
+  
+}
