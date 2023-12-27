@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   root 'tasks#index'
-  resources :tasks, only: [:index, :new, :create, :edit, :update, :show]
+  resources :tasks, only: [:index, :new, :create, :edit, :update, :destroy, :show]
 end
