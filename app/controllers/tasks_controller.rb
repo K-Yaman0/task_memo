@@ -31,6 +31,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @task = Task.find(params[:id])
     if @task.user != current_user
       redirect_to root_path
     else
