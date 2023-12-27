@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_task, only: [:edit, :update, :destroy, :show]
 
   def index
     @tasks = Task.all
@@ -18,11 +20,11 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    return if user_signed_in? && current_user.id == @task.user.id
+    redirect_to action: :index
   end
 
   def update
-    @task = Task.find(params[:id])
     if @task.update(task_params)
       redirect_to root_path
     else
@@ -30,14 +32,27 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    if @task.user != current_user
+      redirect_to root_path
+    else
+      @task.destroy
+    end
+    redirect_to root_path
+  end
+
   def show
-    @task = Task.find(params[:id])
   end
 
 
   private
+  
   def task_params
-    params.require(:task).permit(:content)
+    params.require(:task).permit(:content).merge(user_id: current_user.id)
+  end
+
+  def set_task
+    @task = Task.find(params[:id])
   end
 
 
