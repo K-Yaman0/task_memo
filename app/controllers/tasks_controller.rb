@@ -19,6 +19,8 @@ class TasksController < ApplicationController
   end
 
   def edit
+    return if user_signed_in? && current_user.id == @task.user.id
+    redirect_to action: :index
   end
 
   def update
