@@ -1,3 +1,29 @@
+/**********************
+↓ヘッダー部分
+**********************/
+.header{
+  background-color: #00008B;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.title{
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.login, .sign-up, .logout, .user-nickname, .user-name{
+  color: #ffffff;
+}
+
+.login, .sign-up, .logout{
+  background-color: #4169E1;
+}
+
+/**********************
+↑ヘッダー部分
+**********************/
 .post{
   background-color: #00008B;
   height: 40px;
