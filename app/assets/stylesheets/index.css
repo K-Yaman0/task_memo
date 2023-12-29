@@ -24,16 +24,25 @@
 /**********************
 ↑ヘッダー部分
 **********************/
-.post{
-  background-color: #00008B;
-  height: 40px;
-  width: 80px;
+
+.task-wrapper{
+  padding: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .post-btn{
+  background-color: #00008B;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 60px;
+}
+
+.post-send{
   color: #ffffff;
   
 }
