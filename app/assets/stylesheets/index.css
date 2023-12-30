@@ -2,9 +2,11 @@
 ↓ヘッダー部分
 **********************/
 .header{
+  height: 80px;
   background-color: #00008B;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 20px;
 }
 
@@ -13,12 +15,26 @@
   font-size: 36px;
 }
 
-.login, .sign-up, .logout, .user-nickname, .user-name{
-  color: #ffffff;
+.lists{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.login, .sign-up, .logout{
+.logout-btn, .login-btn, .sign-up-btn, .user-name{
+  height: 50px;
+  width: 100px;
+  color: #ffffff;
+  border: 1px solid #696969;
+  border-radius: 5px;
   background-color: #4169E1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-name{
+  width: 150px;
 }
 
 /**********************
