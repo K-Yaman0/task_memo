@@ -31,6 +31,19 @@
   position: relative;
 }
 
+.task-contents{
+  height: 80px;
+}
+
+.task-content{
+  width: 200px;
+  height: 30px;
+  background-color: #00008B;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
 .post-btn{
   background-color: #00008B;
   height: 50px;
@@ -63,4 +76,6 @@
 
 .hidden{
   display: none;
+  border: 1px solid #696969;
+  height: 50px;
 }
