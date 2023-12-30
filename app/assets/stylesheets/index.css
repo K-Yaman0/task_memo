@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
   padding: 5px 20px;
 }
 
@@ -70,7 +71,7 @@
   align-items: center;
   border-radius: 5px;
   position: fixed;
-  right: 60px;
+  top: 100px; right: 60px;
 }
 
 .post-send{
