@@ -42,6 +42,7 @@
   color: #ffffff;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
 }
 
 .post-btn{
@@ -51,7 +52,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  border-radius: 5px;
+  position: fixed;
   right: 60px;
 }
 
