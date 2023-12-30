@@ -1,13 +1,80 @@
-.post{
+/**********************
+↓ヘッダー部分
+**********************/
+.header{
+  height: 80px;
   background-color: #00008B;
-  height: 40px;
-  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 5px 20px;
+}
+
+.title{
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.lists{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout-btn, .login-btn, .sign-up-btn, .user-name{
+  height: 50px;
+  width: 100px;
+  color: #ffffff;
+  border: 1px solid #696969;
+  border-radius: 5px;
+  background-color: #4169E1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.user-name{
+  width: 150px;
+}
+
+/**********************
+↑ヘッダー部分
+**********************/
+
+.task-wrapper{
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+
+.task-contents{
+  height: 100px;
+}
+
+.task-content{
+  width: 200px;
+  height: 30px;
+  background-color: #00008B;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
 .post-btn{
+  background-color: #00008B;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: fixed;
+  top: 100px; right: 60px;
+}
+
+.post-send{
   color: #ffffff;
   
 }
@@ -28,4 +95,6 @@
 
 .hidden{
   display: none;
+  border: 1px solid #696969;
+  height: 50px;
 }
