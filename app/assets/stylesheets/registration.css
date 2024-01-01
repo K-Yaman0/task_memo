@@ -1,5 +1,8 @@
 .devise-wrapper{
   padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .devise-top{
