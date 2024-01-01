@@ -10,9 +10,23 @@
   margin-bottom: 30px;
 }
 
+.field{
+  margin-bottom: 25px;
+}
+
 .input-default{
   width: 300px;
   height: 30px;
+}
+
+.actions{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.actions input[type="submit"] {
+  background-color: #00008B;
+  color: white;
+  font-size: 16px;
 }
 
 .to-login{
