@@ -5,12 +5,12 @@
 
     <div class="field">
       <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
-      <%= f.text_field :nickname, class:"input-default", autofocus: true, maxlength: "6" %>
+      <%= f.text_field :nickname, class:"input-default", autofocus: true, maxlength: "6", placeholder:"ニックネームを入力してください" %>
     </div>
     
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, class:"input-default", autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, class:"input-default", autofocus: true, autocomplete: "email", placeholder:"Eメールを入力してください" %>
     </div>
 
     <div class="field">
@@ -18,12 +18,12 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, class:"input-default", autocomplete: "new-password" %>
+      <%= f.password_field :password, class:"input-default", autocomplete: "new-password", placeholder:"パスワードを入力して下さい" %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, class:"input-default", autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, class:"input-default", autocomplete: "new-password", placeholder:"同じパスワードを入力して下さい" %>
     </div>
 
     <div class="actions">
