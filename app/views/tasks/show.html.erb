@@ -1,2 +1,6 @@
-<h1>詳細ページ</h1>
-<%= "#{@task.content}のページ"%>
+<div class="task-show-wrapper">
+  <h1 class="task-top"><%= "#{@task.content}の詳細ページ" %></h1>
+  <div class="show-content">
+    <%= @task.content %>
+  </div>
+</div>
