@@ -1,0 +1,36 @@
+.devise-wrapper{
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.devise-top{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.field{
+  margin-bottom: 25px;
+}
+
+.input-default{
+  width: 300px;
+  height: 30px;
+}
+
+.actions{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.actions input[type="submit"] {
+  background-color: #00008B;
+  color: white;
+  font-size: 16px;
+}
+
+.devise-link{
+  font-size: 20px;
+  text-decoration : underline;
+  color: #0000ee;
+}
