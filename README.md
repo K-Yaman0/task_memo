@@ -26,7 +26,7 @@
 
 | Column                  | Type   | Options                   |
 | ----------------------- | ------ | ------------------------- |
-| detail                  | string | null: false               |
+| memo                    | string | null: false               |
 
 ### Association
 
