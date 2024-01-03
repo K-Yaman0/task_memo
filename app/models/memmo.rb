@@ -1,2 +1,0 @@
-class Memmo < ApplicationRecord
-end
