@@ -11,6 +11,14 @@
       <% end %>  
     </ul>
   </div> 
+  <ul class="memos_lists">
+          <% @memos.each do |memo| %>
+            <li class="memos_list">
+              <%= memo.memo %>
+              <%= link_to "(#{memo.user.nickname})", "#", class: "memo_user" %>
+            </li>
+          <% end %>
+        </ul>
   <%= form_with model: [@task, @memo], local: true do |f|%>
       <div class="memo_field">
         <%= f.label :memo, "メモを追加" %><br />
