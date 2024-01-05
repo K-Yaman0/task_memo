@@ -33,3 +33,7 @@
   display: flex;
   justify-content: space-around;
 }
+
+.memo_field{
+  margin-top: 25px;
+}
