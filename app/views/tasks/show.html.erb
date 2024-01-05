@@ -14,8 +14,11 @@
   <ul class="memos_lists">
     <% @memos.each do |memo| %>
       <li class="memos_list">
-        <%= memo.memo %>
-        <%= link_to "(#{memo.user.nickname})", "#", class: "memo_user" %>
+        <div class="memo-content">
+          <%= memo.memo %>
+        <div>
+        <%= link_to "　投稿者：(#{memo.user.nickname})", "#", class: "memo_user" %>
+        <%= link_to "削除", "#", class: "memo_destroy" %>
       </li>
     <% end %>
   </ul>

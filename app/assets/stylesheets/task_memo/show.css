@@ -45,6 +45,19 @@
   padding: 0.5em 0;
 }
 
+.memo-content{
+  font-size: 20px;
+  
+}
+
+.memo_user{
+  font-size: 15px;
+}
+
+.memo_destroy{
+  font-size: 10px;
+}
+
 .memo_field{
   margin-top: 25px;
 }
