@@ -47,7 +47,8 @@
 
 .memo-content{
   font-size: 20px;
-  
+  display: flex;
+
 }
 
 .memo_user{
@@ -55,7 +56,7 @@
 }
 
 .memo_destroy{
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .memo_field{

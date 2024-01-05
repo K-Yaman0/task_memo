@@ -16,11 +16,15 @@
       <li class="memos_list">
         <div class="memo-content">
           <%= memo.memo %>
-        <div>
+          <% if user_signed_in? && current_user.id == memo.user_id %>
+            <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
+          <% end %>
+          <ul class="hidden" id=<%= memo.id%>>
+            <li><%= link_to "削除", task_memo_path(@task, memo), data: { turbo_method: :delete }, class: "memo_destroy" %></li>
+          </ul>
+        </div>
         <%= link_to "　投稿者：(#{memo.user.nickname})", "#", class: "memo_user" %>
-        <% if user_signed_in? && current_user.id == memo.user_id %>
-          <%= link_to "削除", task_memo_path(@task, memo), data: { turbo_method: :delete }, class: "memo_destroy" %>
-        <% end %>
+        
       </li>
     <% end %>
   </ul>
