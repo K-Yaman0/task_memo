@@ -18,7 +18,7 @@
           <%= memo.memo %>
         <div>
         <%= link_to "　投稿者：(#{memo.user.nickname})", "#", class: "memo_user" %>
-        <%= link_to "削除", "#", class: "memo_destroy" %>
+        <%= link_to "削除", task_memo_path(@task, memo), data: { turbo_method: :delete }, class: "memo_destroy" %>
       </li>
     <% end %>
   </ul>

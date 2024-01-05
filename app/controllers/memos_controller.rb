@@ -10,6 +10,17 @@ class MemosController < ApplicationController
     end
   end
 
+  def destroy
+    memo = Memo.find(params[:id])
+    if memo.user != current_user
+      @task = Task.find(params[:id])
+      render 'tasks/show'
+    else
+      memo.destroy
+    end
+    redirect_to task_path(params[:id])
+  end
+
   private
 
   def memo_params
