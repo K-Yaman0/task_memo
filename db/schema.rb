@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_05_023618) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_05_024000) do
   create_table "memos", charset: "utf8", force: :cascade do |t|
     t.string "memo", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "task_id"
+    t.index ["task_id"], name: "index_memos_on_task_id"
     t.index ["user_id"], name: "index_memos_on_user_id"
   end
 
@@ -40,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_05_023618) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "memos", "tasks"
   add_foreign_key "memos", "users"
   add_foreign_key "tasks", "users"
 end
