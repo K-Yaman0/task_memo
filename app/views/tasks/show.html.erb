@@ -4,13 +4,37 @@
     <div class="show-content">
       <%= @task.content %>
     </div>
-    <div>
-      <ul class="show-edit-lists">
-        <% if user_signed_in? && current_user.id == @task.user_id %>
-          <li><%= link_to '編集', edit_task_path(@task), class: "show-edit-list" %></li>
-          <li><%= link_to "削除", task_path(@task.id), data: { turbo_method: :delete }, class: "show-edit-list" %></li>
-        <% end %>  
-      </ul>
-    </div>
-  </div>  
+    <ul class="show-edit-lists">
+      <% if user_signed_in? && current_user.id == @task.user_id %>
+        <li><%= link_to '編集', edit_task_path(@task), class: "show-edit-list" %></li>
+        <li><%= link_to "削除", task_path(@task.id), data: { turbo_method: :delete }, class: "show-edit-list" %></li>
+      <% end %>
+    </ul>
+  </div> 
+  <ul class="memos_lists">
+    <% @memos.each do |memo| %>
+      <li class="memos_list">
+        <div class="memo-content">
+          <%= memo.memo %>
+          <% if user_signed_in? && current_user.id == memo.user_id %>
+            <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
+          <% end %>
+          <ul class="hidden" id=<%= memo.id%>>
+            <li><%= link_to "削除", task_memo_path(@task, memo), data: { turbo_method: :delete }, class: "memo_destroy" %></li>
+          </ul>
+        </div>
+        <%= link_to "　投稿者：(#{memo.user.nickname})", "#", class: "memo_user" %>
+        
+      </li>
+    <% end %>
+  </ul>
+  <%= form_with model: [@task, @memo], local: true do |f|%>
+      <div class="memo_field">
+        <%= f.label :memo, "メモを追加" %><br />
+        <%= f.text_field :memo, class: "input-default", id:"memo_comment", autofocus: true, placeholder:"メモの内容を入力" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "メモを追加", class: :form__btn  %>
+      </div>
+    <% end %> 
 </div>

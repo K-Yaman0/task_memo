@@ -42,6 +42,8 @@ class TasksController < ApplicationController
   end
 
   def show
+    @memo = Memo.new
+    @memos = @task.memos.includes(:user)
   end
 
 
