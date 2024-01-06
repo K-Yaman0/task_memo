@@ -9,13 +9,15 @@
               <%= task.content %>
             </div>
           <% end %>
-          <% if user_signed_in? && current_user.id == task.user_id %>
+          <% if user_signed_in? %>
             <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
           <% end %>
           <ul class="hidden" id=<%= task.id%>>
             <li><%= link_to "メモを追加する", task_path(task.id) %></li>
-            <li><%= link_to '編集', edit_task_path(task) %></li>
-            <li><%= link_to "削除", task_path(task.id), data: { turbo_method: :delete } %></li>
+            <% if user_signed_in? && current_user.id == task.user_id %>
+              <li><%= link_to '編集', edit_task_path(task) %></li>
+              <li><%= link_to "削除", task_path(task.id), data: { turbo_method: :delete } %></li>
+            <% end %>
           </ul>
         </div>
       <% end %>
