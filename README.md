@@ -29,7 +29,7 @@ https://task-memo.onrender.com/
 現職で、現在誰がどの作業を行なっているか、これから何を行うかが共有されていないことがあります。そのため、共有でき、かつ詳細な指示ができるアプリを作成しようと考えました。
 
 # 洗い出した要件
-
+[要件を定義したシートのリンクです](https://docs.google.com/spreadsheets/d/1uQOjEZ6VTFH8WuSglWuwanbcirj4rKhglmTaZP6GCqo/edit?usp=sharing)
 
 # 実装予定の機能
 ・不備があった際にエラー文を表示する機能  
