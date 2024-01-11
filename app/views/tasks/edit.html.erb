@@ -1,5 +1,11 @@
-<h1>編集ページ</h1>
-<%= form_with model: @task, local: true do |f| %>
-  <%= f.text_field :content, placeholder:"タスクを入力" %>
-  <%= f.submit "編集する", class:"sell-btn" %>
-<% end %>
+<div class="form-wrapper">
+  <h1 class="form-top">編集ページ</h1>
+  <%= form_with model: @task, local: true do |f| %>
+    <div class="field">
+      <%= f.text_field :content, class:"input-default", placeholder:"タスクを入力" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "編集する", class:"sell-btn" %>
+    </div>
+  <% end %>
+</div>

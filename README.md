@@ -101,4 +101,3 @@ Visual Studio Code
 
 # 制作時間
 約40時間
-
