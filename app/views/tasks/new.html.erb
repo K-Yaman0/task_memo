@@ -1,7 +1,9 @@
 <div class="form-wrapper">
   <h1 class="form-top">投稿ページ</h1>
   <%= form_with model: @task, local: true do |f| %>
+
     <%= render 'shared/error_messages', model: f.object %>
+    
     <div class="field">
       <%= f.text_field :content, class:"input-default", placeholder:"タスクを入力" %>
     </div>
