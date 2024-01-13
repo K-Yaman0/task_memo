@@ -3,7 +3,7 @@ class Task < ApplicationRecord
   has_many :memos, dependent: :destroy
 
   with_options presence: true do
-    validates :content, presence: { message: 'を入力してください。' }
+    validates :content
   end
 
 end

@@ -3,6 +3,6 @@ class Memo < ApplicationRecord
   belongs_to :task
 
   with_options presence: true do
-    validates :memo, presence: { message: 'を入力してください。' }
+    validates :memo
   end
 end

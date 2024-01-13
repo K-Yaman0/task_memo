@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :memos
 
   with_options presence: true do
-    validates :nickname, presence: { message: 'を入力してください。' }
+    validates :nickname
   end
 end
