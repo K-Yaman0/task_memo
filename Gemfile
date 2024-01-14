@@ -82,3 +82,5 @@ group :development do
 end
 
 gem 'pry-rails'
+
+gem 'rails-i18n'

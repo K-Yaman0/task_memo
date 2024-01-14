@@ -28,7 +28,12 @@
       </li>
     <% end %>
   </ul>
-  <%= form_with model: [@task, @memo], local: true do |f|%>
+
+  <% if user_signed_in? %>
+    <%= form_with model: [@task, @memo], local: true do |f|%>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
       <div class="memo_field">
         <%= f.label :memo, "メモを追加" %><br />
         <%= f.text_field :memo, class: "input-default", id:"memo_comment", autofocus: true, placeholder:"メモの内容を入力" %>
@@ -37,4 +42,5 @@
         <%= f.submit "メモを追加", class: :form__btn  %>
       </div>
     <% end %> 
+  <% end %>   
 </div>
