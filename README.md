@@ -32,7 +32,6 @@ https://task-memo.onrender.com/
 [要件を定義したシートのリンクです](https://docs.google.com/spreadsheets/d/1uQOjEZ6VTFH8WuSglWuwanbcirj4rKhglmTaZP6GCqo/edit?usp=sharing)
 
 # 実装予定の機能
-・不備があった際にエラー文を表示する機能  
 ・メモの内容の編集  
 ・タスクの投稿者の表示  
 ・投稿日時の表示  
