@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   end
   root 'tasks#index'
   resources :tasks do
-    resources :memos, only: [:create, :destroy]
+    resources :memos, only: [:create, :edit, :update, :destroy]
   end
 end
