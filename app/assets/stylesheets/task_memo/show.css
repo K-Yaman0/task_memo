@@ -59,7 +59,7 @@
 .memo-hidden{
   display: none;
   border: 1px solid #696969;
-  height: 40px;
+  height: 60px;
   width: 50px;
 }
 
@@ -67,7 +67,7 @@
   font-size: 15px;
 }
 
-.memo_destroy{
+.memo_destroy, .memo_edit{
   font-size: 15px;
 }
 
