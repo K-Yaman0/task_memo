@@ -20,7 +20,7 @@
             <span><%= image_tag 'arrow_top.png', id: "memo-pull-down-lists" %></span>
           <% end %>
           <ul class="memo-hidden" id=<%= memo.id%>>
-            <li><%= link_to "編集", "#", class: "memo_edit" %></li>
+            <li><%= link_to "編集", edit_task_memo_path(@task, memo), class: "memo_edit" %></li>
             <li><%= link_to "削除", task_memo_path(@task, memo), data: { turbo_method: :delete }, class: "memo_destroy" %></li>
           </ul>
         </div>
