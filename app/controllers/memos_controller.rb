@@ -20,6 +20,14 @@ class MemosController < ApplicationController
   end
 
   def update
+    @task = Task.find(params[:task_id])
+    @memo = Memo.find(params[:id])
+    if @memo.update(memo_params)
+      redirect_to task_path(@task.id)
+    else
+      @memos = @task.memos
+      render 'tasks/show'
+    end
   end
 
   def destroy
