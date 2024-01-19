@@ -30,6 +30,14 @@
     <% end %>
   </ul>
 
+  <div class="flash-message">
+    <% flash.each do |type, message| %>
+      <div class="alert alert-<%= type %>">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
   <% if user_signed_in? %>
     <%= form_with model: [@task, @memo], local: true do |f|%>
 
