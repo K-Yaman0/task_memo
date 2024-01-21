@@ -15,8 +15,8 @@
           <ul class="hidden" id=<%= task.id%>>
             <li><%= link_to "メモを追加する", task_path(task.id) %></li>
             <% if user_signed_in? && current_user.id == task.user_id %>
-              <li><%= link_to '編集', edit_task_path(task) %></li>
-              <li><%= link_to "削除", task_path(task.id), data: { turbo_method: :delete } %></li>
+              <li><%= link_to 'タスクを編集', edit_task_path(task) %></li>
+              <li><%= link_to "タスクを削除", task_path(task.id), data: { turbo_method: :delete } %></li>
             <% end %>
           </ul>
         </div>

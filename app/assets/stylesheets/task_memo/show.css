@@ -59,15 +59,15 @@
 .memo-hidden{
   display: none;
   border: 1px solid #696969;
-  height: 40px;
-  width: 50px;
+  height: 60px;
+  width: 80px;
 }
 
 .memo_user{
   font-size: 15px;
 }
 
-.memo_destroy{
+.memo_destroy, .memo_edit{
   font-size: 15px;
 }
 

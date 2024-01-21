@@ -15,6 +15,15 @@ function pullDown() {
       }
     });
   });
+
+  window.addEventListener('click', function(event) {
+    const clickedElement = event.target;
+  if (!Array.from(pullDownButtons).includes(clickedElement))  {
+    pullDowns.forEach(function(pullDown) {
+      pullDown.style.display = "none";
+    });
+  }
+});
 }
 
 window.addEventListener('turbo:load', pullDown);

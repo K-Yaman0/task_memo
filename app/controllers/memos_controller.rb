@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
   before_action :authenticate_user!
-  
+
   def create
     @memo = Memo.create(memo_params)
     if @memo.save
@@ -12,13 +12,33 @@ class MemosController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:task_id])
+    @memo = Memo.find(params[:id])
+    @memos = @task.memos
+    render 'tasks/show'
+  end
+
+  def update
+    @task = Task.find(params[:task_id])
+    @memo = Memo.find(params[:id])
+    if @memo.update(memo_params)
+      flash[:success] = "編集に成功しました"
+      redirect_to task_path(@task.id)
+    else
+      @memos = @task.memos
+      flash[:danger] = "編集に失敗しました"
+      redirect_to task_path(@task.id)
+    end
+  end
+
   def destroy
-    memo = Memo.find(params[:id])
-    if memo.user != current_user
+    @memo = Memo.find(params[:id])
+    if @memo.user != current_user
       @task = Task.find(params[:id])
       render 'tasks/show'
     else
-      memo.destroy
+      @memo.destroy
     end
     redirect_to task_path(params[:id])
   end
