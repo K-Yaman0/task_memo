@@ -8,6 +8,9 @@
             <div class="task-content">
               <%= task.content %>
             </div>
+            <div class="task-user">
+              投稿者：<%= task.user.nickname %>
+            </div>
           <% end %>
           <% if user_signed_in? %>
             <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
