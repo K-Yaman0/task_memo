@@ -7,9 +7,9 @@
           <%= link_to task_path(task.id) do %>
             <div class="task-content">
               <%= task.content %>
-            </div>
-            <div class="task-user">
-              投稿者：<%= task.user.nickname %>
+              <div class="task-user">
+                投稿者：<%= task.user.nickname %>
+              </div>
             </div>
           <% end %>
           <% if user_signed_in? %>
