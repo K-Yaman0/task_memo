@@ -3,6 +3,9 @@
   <div class="show-contents">
     <div class="show-content">
       <%= @task.content %>
+      <div class="task-user">
+        投稿者：<%= @task.user.nickname %>
+      </div>
     </div>
     <ul class="show-edit-lists">
       <% if user_signed_in? && current_user.id == @task.user_id %>
