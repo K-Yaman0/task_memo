@@ -19,6 +19,14 @@
   padding: 5px 20px;
 }
 
+.show-content{
+  width: 400px;
+  padding-right: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .show-edit-lists{
   width: 100px;
   display: flex;
