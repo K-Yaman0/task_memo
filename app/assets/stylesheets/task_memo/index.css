@@ -44,6 +44,9 @@
 .task-index-wrapper{
   padding: 20px;
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
 }
 
 .task-top{
@@ -56,13 +59,21 @@
 }
 
 .task-content{
-  width: 200px;
-  height: 30px;
+  width: 500px;
+  height: 40px;
   background-color: #00008B;
   color: #ffffff;
+  font-weight: bold;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
   border-radius: 5px;
+}
+
+.task-user{
+  font-size: 15px;
+  color: #ffffff;
 }
 
 .post-btn{
