@@ -1,9 +1,9 @@
 <div class="task-show-wrapper">
-  <h1 class="task-top"><%= "#{@task.content}の詳細ページ" %></h1>
+  <h1 class="task-top"><%= "「#{@task.content}」の詳細ページ" %></h1>
   <div class="show-contents">
     <div class="show-content">
       <%= @task.content %>
-      <div class="task-user">
+      <div class="show-task-user">
         投稿者：<%= @task.user.nickname %>
       </div>
     </div>

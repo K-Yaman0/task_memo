@@ -6,8 +6,8 @@
 }
 
 .show-contents{
-  width: 500px;
-  height: 40px;
+  width: 800px;
+  height: 70px;
   font-size: 20px;
   background-color: #00008B;
   color: #ffffff;
@@ -20,11 +20,16 @@
 }
 
 .show-content{
-  width: 400px;
-  padding-right: 90px;
+  width: 700px;
+  padding-right: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.show-task-user{
+  font-size: 15px;
+  color: #ffffff;
 }
 
 .show-edit-lists{
@@ -45,7 +50,7 @@
 
 .memos_lists{
   margin: 10px 0 30px 0;
-  width: 500px;
+  width: 800px;
   color: #1e366a;
   border-top: solid #1e366a 1px;/*上のボーダー*/
   border-bottom: solid #1e366a 1px;/*下のボーダー*/
