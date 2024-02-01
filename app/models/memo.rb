@@ -3,6 +3,6 @@ class Memo < ApplicationRecord
   belongs_to :task
 
   with_options presence: true do
-    validates :memo
+    validates :memo, length: { maximum: 30 }
   end
 end
