@@ -1,0 +1,15 @@
+<%= form_with model: @task, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+    
+    <div class="field">
+      <%= f.text_field :content, class:"input-default", placeholder:"タスクを入力" %>
+    </div>
+    <div class="actions">
+      <% if f.object.new_record? %>
+        <%= f.submit "投稿する", class:"sell-btn" %>
+      <% else %>
+        <%= f.submit "編集する", class:"sell-btn" %>
+      <% end %>
+    </div>
+  <% end %>

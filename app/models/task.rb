@@ -3,7 +3,7 @@ class Task < ApplicationRecord
   has_many :memos, dependent: :destroy
 
   with_options presence: true do
-    validates :content
+    validates :content, length: { maximum: 20 }
   end
 
 end
