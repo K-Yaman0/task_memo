@@ -8,6 +8,7 @@
             投稿者：<%= task.user.nickname %>
           </div>
         </div>
+        <%= task.created_at %>
       <% end %>
       <% if user_signed_in? %>
         <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
