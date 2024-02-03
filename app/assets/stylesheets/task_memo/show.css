@@ -90,6 +90,7 @@
 }
 
 .back-btn{
+  color: #ffffff;
   background-color: #888888;
   height: 60px;
   width: 120px;
@@ -99,9 +100,4 @@
   border-radius: 5px;
   position: fixed;
   top: 100px; left: 60px;
-}
-
-.back-top{
-  color: #ffffff;
-  
 }
