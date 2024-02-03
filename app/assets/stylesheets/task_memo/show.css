@@ -73,8 +73,6 @@
 .memo-hidden{
   display: none;
   border: 1px solid #696969;
-  height: 60px;
-  width: 80px;
 }
 
 .memo_user{
