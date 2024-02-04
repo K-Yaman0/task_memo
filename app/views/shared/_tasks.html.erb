@@ -1,0 +1,25 @@
+<ul>
+  <% @tasks.each do |task| %>
+    <div class="task-contents">
+      <%= link_to task_path(task.id) do %>
+        <div class="task-content">
+          <%= task.content %>
+          <div class="task-user">
+            投稿者：<%= task.user.nickname %>
+          </div>
+        </div>
+        <%= l task.created_at %>
+      <% end %>
+      <% if user_signed_in? %>
+        <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
+      <% end %>
+      <ul class="hidden" id=<%= task.id%>>
+        <li><%= link_to "メモを追加する", task_path(task.id) %></li>
+        <% if user_signed_in? && current_user.id == task.user_id %>
+          <li><%= link_to 'タスクを編集', edit_task_path(task) %></li>
+          <li><%= link_to "タスクを削除", task_path(task.id), data: { turbo_method: :delete } %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</ul>

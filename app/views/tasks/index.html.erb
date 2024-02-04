@@ -1,31 +1,6 @@
 <div class="task-index-wrapper">
   <h1 class="task-top">タスク一覧</h1>
-  <div class="tasks">
-    <ul>
-      <% @tasks.each do |task| %>
-        <div class="task-contents">
-          <%= link_to task_path(task.id) do %>
-            <div class="task-content">
-              <%= task.content %>
-              <div class="task-user">
-                投稿者：<%= task.user.nickname %>
-              </div>
-            </div>
-          <% end %>
-          <% if user_signed_in? %>
-            <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
-          <% end %>
-          <ul class="hidden" id=<%= task.id%>>
-            <li><%= link_to "メモを追加する", task_path(task.id) %></li>
-            <% if user_signed_in? && current_user.id == task.user_id %>
-              <li><%= link_to 'タスクを編集', edit_task_path(task) %></li>
-              <li><%= link_to "タスクを削除", task_path(task.id), data: { turbo_method: :delete } %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-    </ul>
-  </div>
+  <%= render 'shared/tasks' %>
   <div class="post-btn">
     <%= link_to '投稿する', new_task_path, class: "post-send" %>
   </div>

@@ -59,6 +59,10 @@
   padding: 0.5em 0;
 }
 
+.memos_list{
+  margin-bottom: 10px;
+}
+
 .memo-content{
   font-size: 20px;
   display: flex;
@@ -73,15 +77,10 @@
 .memo-hidden{
   display: none;
   border: 1px solid #696969;
-  height: 60px;
-  width: 80px;
-}
-
-.memo_user{
   font-size: 15px;
 }
 
-.memo_destroy, .memo_edit{
+.memo_user{
   font-size: 15px;
 }
 
@@ -92,6 +91,7 @@
 }
 
 .back-btn{
+  color: #ffffff;
   background-color: #888888;
   height: 60px;
   width: 120px;
@@ -101,9 +101,4 @@
   border-radius: 5px;
   position: fixed;
   top: 100px; left: 60px;
-}
-
-.back-top{
-  color: #ffffff;
-  
 }
