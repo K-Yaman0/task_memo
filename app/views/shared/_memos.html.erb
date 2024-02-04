@@ -12,6 +12,7 @@
         </ul>
       </div>
       <%= link_to "　投稿者：(#{memo.user.nickname})", "#", class: "memo_user" %>
+      <%= l memo.created_at %>
     </li>
   <% end %>
 </ul>

@@ -73,13 +73,10 @@
 .memo-hidden{
   display: none;
   border: 1px solid #696969;
-}
-
-.memo_user{
   font-size: 15px;
 }
 
-.memo_destroy, .memo_edit{
+.memo_user{
   font-size: 15px;
 }
 
