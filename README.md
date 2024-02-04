@@ -32,7 +32,6 @@ https://task-memo.onrender.com/
 [要件を定義したシートのリンクです](https://docs.google.com/spreadsheets/d/1uQOjEZ6VTFH8WuSglWuwanbcirj4rKhglmTaZP6GCqo/edit?usp=sharing)
 
 # 実装予定の機能
-・投稿日時の表示  
 ・一覧画面でもメモの内容を確認できる機能  
 ・完了ボタン  
 ・完了ボタンクリック後に「完了」の表示  
