@@ -55,12 +55,14 @@
 }
 
 .task-contents{
-  height: 100px;
+  margin-bottom: 50px;
+  display: flex;
 }
 
 .task-content{
   width: 500px;
   height: 40px;
+  font-size: 18px;
   background-color: #00008B;
   color: #ffffff;
   font-weight: bold;
@@ -91,14 +93,6 @@
 .post-send{
   color: #ffffff;
   
-}
-
-.task-contents{
-  display: flex;
-}
-
-.task-content{
-  font-size: 18px;
 }
 
 #pull-down-lists{
