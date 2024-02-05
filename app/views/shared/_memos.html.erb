@@ -4,7 +4,7 @@
       <div class="memo-content">
         ・<%= memo.memo %>
         <% if user_signed_in? && current_user.id == memo.user_id %>
-          <span><%= image_tag 'arrow_top.png', id: "memo-pull-down-lists" %></span>
+          <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
         <% end %>
         <%# プルダウン部分 %>
         <ul class="memo-hidden" id=<%= memo.id%>>
