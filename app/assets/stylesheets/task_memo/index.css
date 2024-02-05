@@ -56,7 +56,6 @@
 
 .task-contents{
   margin-bottom: 50px;
-  display: flex;
 }
 
 .task-content{
@@ -75,7 +74,28 @@
 
 .task-user{
   font-size: 15px;
+}
+
+.sub-contents{
+  font-size: 15px;
+  margin: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.completed-btn{
   color: #ffffff;
+  background-color: #00008B;
+  height: 25px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.sub-content{
+  color: #000000;
 }
 
 .post-btn{
@@ -88,11 +108,7 @@
   border-radius: 5px;
   position: fixed;
   top: 100px; right: 60px;
-}
-
-.post-send{
   color: #ffffff;
-  
 }
 
 #pull-down-lists{
@@ -104,5 +120,5 @@
 .hidden{
   display: none;
   border: 1px solid #696969;
-  height: 80px;
+  margin-left: 350px;
 }
