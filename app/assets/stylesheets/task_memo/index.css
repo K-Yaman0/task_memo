@@ -80,7 +80,6 @@
   font-size: 15px;
   margin: 5px 10px;
   display: flex;
-  justify-content: space-between;
 }
 
 .completed-btn{
@@ -88,6 +87,7 @@
   background-color: #00008B;
   height: 25px;
   width: 45px;
+  margin-right: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,5 +120,4 @@
 .hidden{
   display: none;
   border: 1px solid #696969;
-  margin-left: 350px;
 }
