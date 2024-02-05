@@ -12,9 +12,11 @@
         </div>
       <% end %>
       <div class="sub-contents">
-        <div class="completed-btn" id=<%= task.id%>>
-          完了
-        </div>
+        <% if user_signed_in? && current_user.id == task.user_id %>
+          <div class="completed-btn" id=<%= task.id%>>
+            完了
+          </div>
+        <% end %>
         <div class="sub-content">
           <%= l task.created_at %>
           <% if user_signed_in? %>
