@@ -94,6 +94,18 @@
   border-radius: 5px;
 }
 
+.completed{
+  /*display: none; */
+  color: #ffffff;
+  background-color: #FF0000;
+  height: 25px;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
 .sub-content{
   color: #000000;
   position: absolute;
