@@ -13,8 +13,8 @@
       <% end %>
       <div class="sub-contents">
         <% if user_signed_in? && current_user.id == task.user_id %>
-          <div class="completed-btn" id=<%= task.id%>>
-            完了
+          <div class="completed-btn">
+            <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn" %>
           </div>
         <% end %>
         <div class="completed">
