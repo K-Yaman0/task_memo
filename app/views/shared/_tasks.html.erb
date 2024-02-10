@@ -14,7 +14,7 @@
       <div class="sub-contents">
         <% if user_signed_in? && current_user.id == task.user_id %>
           <div class="completed-btn">
-            <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn" %>
+            <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn", form: { data: {turbo_confirm: "本当に完了しますか？" }} %>
           </div>
         <% end %>
         <% if Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
