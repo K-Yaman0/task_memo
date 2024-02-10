@@ -17,9 +17,11 @@
             <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn" %>
           </div>
         <% end %>
-        <div class="completed">
-          完了済み
-        </div>
+        <% if Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
+          <div class="completed">
+            完了済み
+          </div>
+        <% end %>
         <div class="sub-content">
           <%= l task.created_at %>
           <% if user_signed_in? %>
