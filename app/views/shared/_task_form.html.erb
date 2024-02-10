@@ -3,7 +3,7 @@
     <%= render 'shared/error_messages', model: f.object %>
     
     <div class="field">
-      <%= f.text_field :content, class:"input-default", placeholder:"タスクを入力" %>
+      <%= f.text_field :content, class:"input-default", autofocus: true, placeholder:"タスクを入力" %>
     </div>
     <div class="actions">
       <% if f.object.new_record? %>
