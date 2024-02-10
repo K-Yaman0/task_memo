@@ -80,7 +80,6 @@
   font-size: 15px;
   margin: 5px 10px;
   display: flex;
-  position: relative;
 }
 
 .completed-btn{
@@ -95,7 +94,6 @@
 }
 
 .completed{
-  /*display: none; */
   color: #ffffff;
   background-color: #FF0000;
   height: 25px;
@@ -108,8 +106,7 @@
 
 .sub-content{
   color: #000000;
-  position: absolute;
-  left: 300px;
+  margin: 0 0 0 auto;
 }
 
 .post-btn{
