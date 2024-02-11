@@ -10,5 +10,4 @@ class CompletesController < ApplicationController
   def set_complete
     @task = Task.find(params[:id])
   end
-
 end

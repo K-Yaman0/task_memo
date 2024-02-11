@@ -21,6 +21,7 @@ class TasksController < ApplicationController
 
   def edit
     return if user_signed_in? && current_user.id == @task.user.id
+
     redirect_to action: :index
   end
 
@@ -46,9 +47,8 @@ class TasksController < ApplicationController
     @memos = @task.memos.includes(:user)
   end
 
-
   private
-  
+
   def task_params
     params.require(:task).permit(:content).merge(user_id: current_user.id)
   end
@@ -56,6 +56,4 @@ class TasksController < ApplicationController
   def set_task
     @task = Task.find(params[:id])
   end
-
-
 end
