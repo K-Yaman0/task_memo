@@ -12,7 +12,7 @@
         </div>
       <% end %>
       <div class="sub-contents">
-        <% if user_signed_in? && current_user.id == task.user_id %>
+        <% if user_signed_in? && current_user.id == task.user_id && !Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
           <div class="completed-btn">
             <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn", form: { data: {turbo_confirm: "完了にしますか？" }} %>
           </div>
