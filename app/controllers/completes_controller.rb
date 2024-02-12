@@ -10,4 +10,9 @@ class CompletesController < ApplicationController
   def set_complete
     @task = Task.find(params[:id])
   end
+
+  def revert_complete
+    Complete.find_by(user_id: current_user.id, task_id: @task.id).destroy
+  end
+
 end

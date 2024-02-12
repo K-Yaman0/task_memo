@@ -13,17 +13,13 @@
       <% end %>
       <div class="sub-contents">
         <% if user_signed_in? && current_user.id == task.user_id && !Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
-          <div class="completed-btn">
-            <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn", form: { data: {turbo_confirm: "完了にしますか？" }} %>
-          </div>
+          <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn", form: { data: {turbo_confirm: "完了にしますか？" }} %>
         <% end %>
         <% if Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
-          <div class="completed">
-            完了済み
-          </div>
+          <%= button_to '完了済み', revert_complete_path(task.id), method: :get, class: "completed", form: { data: {turbo_confirm: "完了前に戻しますか？" }} %>
         <% end %>
         <div class="sub-content">
-          <%= l task.created_at %>
+          投稿日時：<%= l task.created_at %>
           <% if user_signed_in? %>
             <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
           <% end %>
