@@ -104,6 +104,13 @@
   border-radius: 5px;
 }
 
+.completed-time{
+  color: #000000;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
 .sub-content{
   color: #000000;
   margin: 0 0 0 auto;

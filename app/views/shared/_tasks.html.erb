@@ -17,7 +17,9 @@
         <% end %>
         <% if Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
           <%= button_to '完了済み', revert_complete_path(task.id), method: :get, class: "completed", form: { data: {turbo_confirm: "完了前に戻しますか？" }} %>
-          (<%=  DateTime.parse(l task.complete.created_at).strftime("%Y-%m-%d %H:%M"), class: "completed-time" %>)
+          <div class="completed-time">
+            (<%=  DateTime.parse(l task.complete.created_at).strftime("%Y-%m-%d %H:%M") %>)
+          </div>
         <% end %>
         <div class="sub-content">
           投稿日時：<%= l task.created_at %>
