@@ -4,12 +4,14 @@
       <div class="memo-content">
         ・<%= memo.memo %>
         <% if user_signed_in? && current_user.id == memo.user_id %>
-          <span><%= image_tag 'arrow_top.png', id: "memo-pull-down-lists" %></span>
+          <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
         <% end %>
+        <%# プルダウン部分 %>
         <ul class="memo-hidden" id=<%= memo.id%>>
           <li><%= link_to "メモを編集", edit_task_memo_path(@task, memo), class: "memo_edit" %></li>
           <li><%= link_to "メモを削除", task_memo_path(@task, memo), data: { turbo_method: :delete }, class: "memo_destroy" %></li>
         </ul>
+        <%# プルダウン部分 %>
       </div>
       <%= link_to "　投稿者：(#{memo.user.nickname})", "#", class: "memo_user" %>
       <%= l memo.created_at %>

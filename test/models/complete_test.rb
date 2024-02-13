@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MemosControllerTest < ActionDispatch::IntegrationTest
+class CompleteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -23,13 +23,12 @@ class MemosController < ApplicationController
     @task = Task.find(params[:task_id])
     @memo = Memo.find(params[:id])
     if @memo.update(memo_params)
-      flash[:success] = "編集に成功しました"
-      redirect_to task_path(@task.id)
+      flash[:success] = '編集に成功しました'
     else
       @memos = @task.memos
-      flash[:danger] = "編集に失敗しました"
-      redirect_to task_path(@task.id)
+      flash[:danger] = '編集に失敗しました'
     end
+    redirect_to task_path(@task.id)
   end
 
   def destroy

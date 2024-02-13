@@ -3,23 +3,40 @@
     <div class="task-contents">
       <%= link_to task_path(task.id) do %>
         <div class="task-content">
-          <%= task.content %>
+          <div class="task">
+            <%= task.content %>
+          </div>
           <div class="task-user">
             投稿者：<%= task.user.nickname %>
           </div>
         </div>
-        <%= l task.created_at %>
       <% end %>
-      <% if user_signed_in? %>
-        <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
-      <% end %>
-      <ul class="hidden" id=<%= task.id%>>
-        <li><%= link_to "メモを追加する", task_path(task.id) %></li>
-        <% if user_signed_in? && current_user.id == task.user_id %>
-          <li><%= link_to 'タスクを編集', edit_task_path(task) %></li>
-          <li><%= link_to "タスクを削除", task_path(task.id), data: { turbo_method: :delete } %></li>
+      <div class="sub-contents">
+        <% if user_signed_in? && current_user.id == task.user_id && !Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
+          <%= button_to '完了する', complete_path(task.id), method: :get, class: "completed-btn", form: { data: {turbo_confirm: "完了にしますか？" }} %>
         <% end %>
-      </ul>
+        <% if Complete.where(user_id: task.user.id, task_id: task.id).exists? %>
+          <%= button_to '完了済み', revert_complete_path(task.id), method: :get, class: "completed", form: { data: {turbo_confirm: "完了前に戻しますか？" }} %>
+          <div class="completed-time">
+            (<%=  DateTime.parse(l task.complete.created_at).strftime("%Y-%m-%d %H:%M") %>)
+          </div>
+        <% end %>
+        <div class="sub-content">
+          投稿日時：<%= l task.created_at %>
+          <% if user_signed_in? %>
+            <span><%= image_tag 'arrow_top.png', id: "pull-down-lists" %></span>
+          <% end %>
+          <%# プルダウン部分 %>
+          <ul class="hidden" id=<%= task.id%>>
+            <li><%= link_to "メモを追加する", task_path(task.id) %></li>
+            <% if user_signed_in? && current_user.id == task.user_id %>
+              <li><%= link_to 'タスクを編集', edit_task_path(task) %></li>
+              <li><%= link_to "タスクを削除", task_path(task.id), data: { turbo_method: :delete } %></li>
+            <% end %>
+          </ul>
+          <%# プルダウン部分 %>
+        </div>
+      </div>
     </div>
   <% end %>
 </ul>
