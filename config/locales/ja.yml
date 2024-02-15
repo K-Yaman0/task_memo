@@ -5,6 +5,7 @@ ja:
         nickname: ニックネーム
       task:
         content: タスク
+        user: ユーザー
       memo:
         memo: メモ
   time:
