@@ -8,6 +8,8 @@ ja:
         user: ユーザー
       memo:
         memo: メモ
+        user: ユーザー
+        task: タスク
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
